@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les secrets d'une pizza parfaite - FusionEats</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="FusionEats Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-list.html">Commander</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="about-us.html">À propos</a></li>
+                            <li><a class="dropdown-item" href="team.html">Notre équipe</a></li>
+                            <li><a class="dropdown-item" href="menu.html">Menu</a></li>
+                            <li><a class="dropdown-item" href="reservation.html">Réservation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog-list.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="shop-list.html" class="btn btn-primary rounded-pill">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            <span class="badge bg-light text-dark">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page Blog Détail -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4">Les secrets d'une pizza parfaite à la maison</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Accueil</a></li>
+                            <li class="breadcrumb-item"><a href="blog-list.html" class="text-white">Blog</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Les secrets d'une pizza parfaite</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Décorations alimentaires -->
+        <img src="images/tomato.png" alt="Tomate" class="food-decoration decoration-tomato">
+        <img src="images/leaf.png" alt="Feuille" class="food-decoration decoration-leaf">
+        <img src="images/olive.png" alt="Olive" class="food-decoration decoration-olive">
+        <img src="images/onion.png" alt="Oignon" class="food-decoration decoration-onion">
+    </header>
+
+    <!-- Section contenu du blog -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Article blog (colonne principale) -->
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow">
+                        <img src="images/blog/blog-1-large.jpg" class="card-img-top" alt="Les secrets d'une pizza parfaite">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="images/team/chef-1.jpg" alt="Marie Laurent" class="rounded-circle me-2" style="width: 50px; height: 50px; object-fit: cover;">
+                                <div>
+                                    <p class="mb-0">Par <strong>Marie Laurent</strong></p>
+                                    <p class="small text-muted mb-0">15 Mars 2023 • 10 min de lecture</p>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-content">
+                                <p class="lead">Découvrez nos astuces de chef pour réaliser une pizza digne des meilleures pizzerias italiennes. De la préparation de la pâte à la cuisson, en passant par le choix des ingrédients, nous vous dévoilons tous nos secrets.</p>
+                                
+                                <h2 class="mt-5 mb-4">La pâte, fondement d'une pizza réussie</h2>
+                                <p>La base d'une bonne pizza commence inévitablement par sa pâte. Les pizzaiolos italiens traditionnels utilisent une recette simple mais précise : farine de type 00 (très fine), eau, levure, sel et parfois un peu d'huile d'olive. Voici comment procéder pour obtenir une pâte parfaite :</p>
+                                
+                                <ul>
+                                    <li><strong>Les ingrédients de qualité</strong> : Optez pour une farine italienne de type 00, idéale pour les pizzas, et une levure fraîche si possible.</li>
+                                    <li><strong>Le pétrissage</strong> : Travaillez la pâte pendant au moins 10 minutes pour développer le gluten, qui donnera de l'élasticité.</li>
+                                    <li><strong>Le temps de repos</strong> : Laissez reposer la pâte au moins 24h au réfrigérateur. Cette fermentation lente améliore considérablement la saveur et la texture.</li>
+                                    <li><strong>La température</strong> : Sortez la pâte du réfrigérateur au moins 2h avant utilisation pour qu'elle revienne à température ambiante.</li>
+                                </ul>
+                                
+                                <p>Une astuce de professionnel : ajoutez une cuillère à soupe de miel à votre pâte. Le sucre aide la levure à travailler et favorise la caramélisation lors de la cuisson.</p>
+                                
+                                <h2 class="mt-5 mb-4">La sauce tomate, le cœur de la pizza</h2>
+                                <p>Une sauce tomate réussie doit être équilibrée : ni trop acide, ni trop sucrée, et surtout savoureuse. Contrairement aux idées reçues, les meilleures sauces pour pizza sont souvent les plus simples :</p>
+                                
+                                <ol>
+                                    <li>Commencez par des tomates San Marzano en conserve, réputées pour leur douceur et leur saveur intense.</li>
+                                    <li>Écrasez-les à la main pour conserver un peu de texture.</li>
+                                    <li>Assaisonnez simplement avec du sel, un filet d'huile d'olive extra vierge et éventuellement un peu d'origan.</li>
+                                    <li>Certains ajoutent une pointe d'ail écrasé, mais les puristes s'en tiennent aux trois ingrédients ci-dessus.</li>
+                                </ol>
+                                
+                                <p>Le secret ? Ne pas cuire la sauce avant de l'utiliser sur la pizza. Elle cuira parfaitement pendant la cuisson de la pizza, conservant ainsi toute sa fraîcheur.</p>
+                                
+                                <div class="row my-5">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <img src="images/blog/pizza-dough.jpg" alt="Préparation de la pâte à pizza" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="images/blog/pizza-sauce.jpg" alt="Préparation de la sauce tomate" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                                
+                                <h2 class="mt-5 mb-4">Le fromage et les garnitures</h2>
+                                <p>Le choix du fromage est crucial pour une pizza réussie. La mozzarella est la référence, mais toutes les mozzarellas ne se valent pas :</p>
+                                
+                                <ul>
+                                    <li><strong>Mozzarella di Bufala Campana DOP</strong> : La plus authentique, au lait de bufflonne, elle apporte une onctuosité incomparable.</li>
+                                    <li><strong>Fior di Latte</strong> : Mozzarella au lait de vache, plus accessible et également excellente pour les pizzas.</li>
+                                    <li><strong>Mozzarella à faible teneur en humidité</strong> : Idéale si vous craignez que votre pizza ne soit trop humide.</li>
+                                </ul>
+                                
+                                <p>Concernant les garnitures, la règle d'or est la modération. Trop d'ingrédients rendent la pizza lourde et difficile à cuire uniformément. Privilégiez la qualité à la quantité, et choisissez des combinaisons d'ingrédients qui se complètent bien.</p>
+                                
+                                <h2 class="mt-5 mb-4">La cuisson, l'étape décisive</h2>
+                                <p>La cuisson parfaite d'une pizza nécessite idéalement une température très élevée (400-450°C dans les fours à pizza professionnels). À la maison, voici comment obtenir les meilleurs résultats :</p>
+                                
+                                <ul>
+                                    <li><strong>Utilisez une pierre à pizza ou une plaque en acier</strong> : Préchauffée pendant au moins 30 minutes, elle stocke la chaleur et aide à obtenir une base croustillante.</li>
+                                    <li><strong>Chauffez votre four au maximum</strong> : La plupart des fours domestiques montent à 250-275°C, utilisez cette température maximale.</li>
+                                    <li><strong>Position de la grille</strong> : Placez-la dans le tiers inférieur du four pour bien cuire la base.</li>
+                                    <li><strong>Temps de cuisson court</strong> : À haute température, 8-10 minutes suffisent généralement.</li>
+                                </ul>
+                                
+                                <p>Une astuce pour simuler un four à pizza professionnel : préchauffez votre four avec la fonction grill, puis passez en chaleur traditionnelle au moment d'enfourner. Cela donne un coup de chaleur initial qui aide à faire lever la pâte.</p>
+                                
+                                <h2 class="mt-5 mb-4">Conclusion</h2>
+                                <p>Réaliser une pizza parfaite à la maison demande un peu de pratique, mais les résultats en valent la peine. Souvenez-vous que les meilleurs pizzaiolos italiens passent des années à perfectionner leur art - alors ne vous découragez pas si vos premières tentatives ne sont pas parfaites !</p>
+                                
+                                <p>L'essentiel est de comprendre les principes fondamentaux : une pâte bien reposée, des ingrédients de qualité utilisés avec parcimonie, et la chaleur la plus intense possible pour la cuisson. À partir de là, amusez-vous à créer vos propres variations et à développer votre style personnel.</p>
+                                
+                                <p>Buon appetito !</p>
+                            </div>
+                            
+                            <!-- Partage social -->
+                            <div class="d-flex align-items-center mt-5">
+                                <span class="me-3">Partager :</span>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-outline-info btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-outline-danger btn-sm me-2"><i class="fab fa-pinterest"></i></a>
+                                <a href="#" class="btn btn-outline-success btn-sm"><i class="fas fa-envelope"></i></a>
+                            </div>
+                            
+                            <!-- Tags -->
+                            <div class="mt-4">
+                                <span class="me-2">Tags :</span>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3 me-1">Pizza</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3 me-1">Recettes</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3 me-1">Cuisine italienne</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Astuces</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Auteur -->
+                    <div class="card border-0 shadow mt-5 p-4">
+                        <div class="d-flex">
+                            <img src="images/team/chef-1.jpg" alt="Marie Laurent" class="rounded-circle me-4" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div>
+                                <h4>Marie Laurent</h4>
+                                <p class="text-primary mb-3">Chef Executive</p>
+                                <p>Formée dans les plus grandes cuisines françaises et italiennes, Marie apporte son expertise gastronomique et sa créativité à chaque recette. Passionnée par la cuisine méditerranéenne, elle partage régulièrement ses astuces et techniques sur notre blog.</p>
+                                <div class="mt-2">
+                                    <a href="#" class="btn btn-sm btn-primary me-2"><i class="fab fa-facebook-f me-1"></i> Suivre</a>
+                                    <a href="#" class="btn btn-sm btn-info text-white"><i class="fab fa-twitter me-1"></i> Suivre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation entre articles -->
+                    <div class="d-flex justify-content-between mt-5">
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-left me-2"></i> Article précédent
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            Article suivant <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Commentaires -->
+                    <div class="mt-5">
+                        <h3 class="mb-4">4 Commentaires</h3>
+                        
+                        <!-- Commentaire 1 -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <img src="images/testimonial-1.jpg" alt="Commentateur" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="mb-0">Michel Dupont</h5>
+                                            <span class="text-muted small">18 Mars 2023</span>
+                                        </div>
+                                        <p>Merci pour ces conseils précieux ! J'ai essayé votre technique de repos long pour la pâte, et c'est vrai que ça change tout. Ma pizza était bien plus savoureuse et digeste.</p>
+                                        <button class="btn btn-sm btn-link p-0">Répondre</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Commentaire 2 -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <img src="images/testimonial-2.jpg" alt="Commentateur" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="mb-0">Sophie Martin</h5>
+                                            <span class="text-muted small">17 Mars 2023</span>
+                                        </div>
+                                        <p>Je n'avais jamais pensé à ne pas cuire la sauce tomate avant. Ça a fait toute la différence ! Par contre, j'aimerais savoir si on peut préparer la pâte à l'avance et la congeler ?</p>
+                                        <button class="btn btn-sm btn-link p-0">Répondre</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Réponse au commentaire 2 -->
+                        <div class="card border-0 shadow-sm mb-4 ms-5">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <img src="images/team/chef-1.jpg" alt="Auteur" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="mb-0">Marie Laurent <span class="badge bg-primary ms-2">Auteur</span></h5>
+                                            <span class="text-muted small">17 Mars 2023</span>
+                                        </div>
+                                        <p>Bonjour Sophie, oui tout à fait ! Vous pouvez préparer la pâte, la diviser en boules individuelles, et les congeler. Enveloppez-les bien dans du film alimentaire puis dans du papier aluminium. Décongelez-les 24h au réfrigérateur avant utilisation. La pâte se conserve ainsi jusqu'à 3 mois.</p>
+                                        <button class="btn btn-sm btn-link p-0">Répondre</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Commentaire 3 -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <img src="images/testimonial-3.jpg" alt="Commentateur" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="mb-0">Thomas Lefebvre</h5>
+                                            <span class="text-muted small">16 Mars 2023</span>
+                                        </div>
+                                        <p>Article très complet, merci ! J'ai investi dans une pierre à pizza récemment, et c'est effectivement un game-changer. Pour ceux qui hésitent encore, foncez !</p>
+                                        <button class="btn btn-sm btn-link p-0">Répondre</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Formulaire de commentaire -->
+                        <div class="card border-0 shadow mt-5">
+                            <div class="card-body p-4">
+                                <h4 class="mb-4">Laisser un commentaire</h4>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="name" class="form-label">Nom *</label>
+                                            <input type="text" class="form-control" id="name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="comment" class="form-label">Commentaire *</label>
+                                            <textarea class="form-control" id="comment" rows="5" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="saveInfo">
+                                                <label class="form-check-label" for="saveInfo">
+                                                    Enregistrer mon nom et mon email pour mes prochains commentaires
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Publier le commentaire</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar blog -->
+                <div class="col-lg-4">
+                    <!-- Recherche -->
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Recherche</h5>
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Rechercher...">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Catégories -->
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Catégories</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-body">Pizza</a>
+                                    <span class="badge bg-primary rounded-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-body">Burger</a>
+                                    <span class="badge bg-primary rounded-pill">6</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-body">Tacos</a>
+                                    <span class="badge bg-primary rounded-pill">4</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-body">Cuisine Maison</a>
+                                    <span class="badge bg-primary rounded-pill">12</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-body">Nutrition</a>
+                                    <span class="badge bg-primary rounded-pill">5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Articles récents -->
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Articles récents</h5>
+                            <!-- Article récent 1 -->
+                            <div class="d-flex mb-3">
+                                <a href="blog-detail.html" class="flex-shrink-0">
+                                    <img src="images/blog/blog-1-small.jpg" alt="Article récent" style="width: 80px; height: 80px; object-fit: cover;">
+                                </a>
+                                <div class="ms-3">
+                                    <h6 class="mb-1"><a href="blog-detail.html" class="text-decoration-none text-body">Les secrets d'une pizza parfaite</a></h6>
+                                    <div class="small text-muted">15 Mars 2023</div>
+                                </div>
+                            </div>
+                            <!-- Article récent 2 -->
+                            <div class="d-flex mb-3">
+                                <a href="blog-detail.html" class="flex-shrink-0">
+                                    <img src="images/blog/blog-2-small.jpg" alt="Article récent" style="width: 80px; height: 80px; object-fit: cover;">
+                                </a>
+                                <div class="ms-3">
+                                    <h6 class="mb-1"><a href="blog-detail.html" class="text-decoration-none text-body">Comment préparer un burger gourmet</a></h6>
+                                    <div class="small text-muted">28 Février 2023</div>
+                                </div>
+                            </div>
+                            <!-- Article récent 3 -->
+                            <div class="d-flex">
+                                <a href="blog-detail.html" class="flex-shrink-0">
+                                    <img src="images/blog/blog-3-small.jpg" alt="Article récent" style="width: 80px; height: 80px; object-fit: cover;">
+                                </a>
+                                <div class="ms-3">
+                                    <h6 class="mb-1"><a href="blog-detail.html" class="text-decoration-none text-body">L'art des tacos mexicains authentiques</a></h6>
+                                    <div class="small text-muted">10 Février 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Tags</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Pizza</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Burger</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Tacos</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Recettes</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Cuisine</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Astuces</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Fast-food</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Gourmet</a>
+                                <a href="#" class="badge bg-light text-dark text-decoration-none py-2 px-3">Healthy</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Suivez-nous -->
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Suivez-nous</h5>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-outline-primary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-outline-info"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-outline-danger"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-outline-danger"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo-white.png" alt="FusionEats Logo" class="mb-4" style="max-height: 70px;">
+                    <p>Une expérience culinaire unique qui fusionne les meilleures saveurs du monde entier pour satisfaire toutes vos envies de street food gourmet.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">INFORMATIONS</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about-us.html">À propos</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="blog-list.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">PLATS PHARES</h5>
+                    <ul class="footer-links">
+                        <li><a href="shop-detail.html">Pizza Margherita</a></li>
+                        <li><a href="shop-detail.html">Burger Classic</a></li>
+                        <li><a href="shop-detail.html">Tacos Mexicains</a></li>
+                        <li><a href="shop-detail.html">Panini Poulet</a></li>
+                        <li><a href="shop-detail.html">Frites Maison</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Rue de la Gastronomie, 75001 Paris</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> 01 23 45 67 89</li>
+                        <li><i class="fas fa-envelope me-2"></i> contact@fusioneats.fr</li>
+                        <li><i class="fas fa-clock me-2"></i> Lun-Dim: 11h00 - 23h00</li>
+                    </ul>
+                    <div class="mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Votre email">
+                                <button class="btn btn-primary" type="button">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright py-3">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2023 FusionEats. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Politique de confidentialité</a>
+                        <a href="#" class="text-white">Conditions d'utilisation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personnalisé -->
+    <script src="js/script.js"></script>
+</body>
+</html>

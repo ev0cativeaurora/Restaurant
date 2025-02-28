@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander - FusionEats</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="FusionEats Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="shop-list.html">Commander</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="about-us.html">À propos</a></li>
+                            <li><a class="dropdown-item" href="team.html">Notre équipe</a></li>
+                            <li><a class="dropdown-item" href="menu.html">Menu</a></li>
+                            <li><a class="dropdown-item" href="reservation.html">Réservation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-list.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="cart.html" class="btn btn-primary rounded-pill">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            <span class="badge bg-light text-dark cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page Shop -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4">Notre Menu</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Accueil</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Commander</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Décorations alimentaires -->
+        <img src="images/tomato.png" alt="Tomate" class="food-decoration decoration-tomato">
+        <img src="images/leaf.png" alt="Feuille" class="food-decoration decoration-leaf">
+        <img src="images/olive.png" alt="Olive" class="food-decoration decoration-olive">
+        <img src="images/onion.png" alt="Oignon" class="food-decoration decoration-onion">
+    </header>
+
+    <!-- Section filtres et produits -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar filtres (version desktop) -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Catégories</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action active">Tous les plats</a>
+                                <a href="#" class="list-group-item list-group-item-action">Pizzas</a>
+                                <a href="#" class="list-group-item list-group-item-action">Burgers</a>
+                                <a href="#" class="list-group-item list-group-item-action">Tacos</a>
+                                <a href="#" class="list-group-item list-group-item-action">Sandwichs</a>
+                                <a href="#" class="list-group-item list-group-item-action">Accompagnements</a>
+                                <a href="#" class="list-group-item list-group-item-action">Boissons</a>
+                                <a href="#" class="list-group-item list-group-item-action">Desserts</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Prix</h5>
+                            <input type="range" class="form-range mb-3" min="0" max="30" step="1" id="priceRange">
+                            <div class="d-flex justify-content-between">
+                                <span>0€</span>
+                                <span>30€</span>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-sm">Filtrer</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Préférences alimentaires</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="vegetarian">
+                                <label class="form-check-label" for="vegetarian">
+                                    Végétarien
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="vegan">
+                                <label class="form-check-label" for="vegan">
+                                    Végan
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="glutenFree">
+                                <label class="form-check-label" for="glutenFree">
+                                    Sans gluten
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="dairyFree">
+                                <label class="form-check-label" for="dairyFree">
+                                    Sans lactose
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Note client</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="rating" id="rating5" checked>
+                                <label class="form-check-label" for="rating5">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="rating" id="rating4">
+                                <label class="form-check-label" for="rating4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    & plus
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="rating" id="rating3">
+                                <label class="form-check-label" for="rating3">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    & plus
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rating" id="rating2">
+                                <label class="form-check-label" for="rating2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    & plus
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contenu principal -->
+                <div class="col-lg-9">
+                    <!-- Filtres mobiles et options de tri -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+                            <i class="fas fa-filter me-2"></i> Filtres
+                        </button>
+                        
+                        <div class="d-flex align-items-center">
+                            <span class="me-2">Trier par:</span>
+                            <select class="form-select form-select-sm" style="width: auto;">
+                                <option selected>Popularité</option>
+                                <option>Prix: croissant</option>
+                                <option>Prix: décroissant</option>
+                                <option>Note: décroissant</option>
+                                <option>Nouveautés</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Grille de produits -->
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <div class="badge bg-danger position-absolute top-0 end-0 m-3">Populaire</div>
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/pizzas/margherita.jpg" class="card-img-top" alt="Pizza Margherita">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Pizza Margherita</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span class="ms-1 text-muted">(4.7)</span>
+                                    </div>
+                                    <p class="card-text">Base tomate, mozzarella fraîche, basilic frais et huile d'olive extra vierge.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">12.50 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 2 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/pizzas/pepperoni.jpg" class="card-img-top" alt="Pizza Pepperoni">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Pizza Pepperoni</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span class="ms-1 text-muted">(4.0)</span>
+                                    </div>
+                                    <p class="card-text">Base tomate, mozzarella, pepperoni, origan et huile pimentée.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">14.90 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 3 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <div class="badge bg-success position-absolute top-0 end-0 m-3">Végétarien</div>
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/pizzas/vegetarienne.jpg" class="card-img-top" alt="Pizza Végétarienne">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Pizza Végétarienne</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="ms-1 text-muted">(5.0)</span>
+                                    </div>
+                                    <p class="card-text">Base tomate, mozzarella, champignons, poivrons, olives, artichauts et roquette.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">13.90 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 4 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <div class="badge bg-danger position-absolute top-0 end-0 m-3">Best-seller</div>
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/burgers/classic.jpg" class="card-img-top" alt="Burger Classic">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Burger Classic</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="ms-1 text-muted">(4.9)</span>
+                                    </div>
+                                    <p class="card-text">Steak de bœuf, salade, tomate, oignon, fromage cheddar, sauce maison.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">14.90 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 5 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/burgers/cheese.jpg" class="card-img-top" alt="Cheeseburger Deluxe">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Cheeseburger Deluxe</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span class="ms-1 text-muted">(4.5)</span>
+                                    </div>
+                                    <p class="card-text">Double steak, double fromage, bacon croustillant, oignons caramélisés, sauce BBQ.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">16.90 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 6 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <div class="badge bg-success position-absolute top-0 end-0 m-3">Végétarien</div>
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/burgers/veggie.jpg" class="card-img-top" alt="Burger Végétarien">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Burger Végétarien</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span class="ms-1 text-muted">(4.0)</span>
+                                    </div>
+                                    <p class="card-text">Galette de légumes, avocat, tomate, roquette, fromage de chèvre, sauce aux herbes.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">13.90 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 7 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <div class="badge bg-danger position-absolute top-0 end-0 m-3">Nouveau</div>
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/tacos/mexicains.jpg" class="card-img-top" alt="Tacos Mexicains">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Tacos Mexicains</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span class="ms-1 text-muted">(4.1)</span>
+                                    </div>
+                                    <p class="card-text">Trois tacos au poulet mariné, guacamole, pico de gallo, crème fraîche.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">13.50 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 8 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/tacos/boeuf.jpg" class="card-img-top" alt="Tacos au Bœuf">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Tacos au Bœuf</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span class="ms-1 text-muted">(4.7)</span>
+                                    </div>
+                                    <p class="card-text">Trois tacos au bœuf épicé, oignons rouges, coriandre, sauce chipotle.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">14.50 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 9 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card food-card h-100">
+                                <div class="badge bg-success position-absolute top-0 end-0 m-3">Végétarien</div>
+                                <a href="shop-detail.html" class="text-decoration-none">
+                                    <img src="images/food/tacos/veggie.jpg" class="card-img-top" alt="Tacos Végétariens">
+                                </a>
+                                <div class="card-body">
+                                    <a href="shop-detail.html" class="text-decoration-none text-dark">
+                                        <h5 class="card-title">Tacos Végétariens</h5>
+                                    </a>
+                                    <div class="mb-2 rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span class="ms-1 text-muted">(4.2)</span>
+                                    </div>
+                                    <p class="card-text">Trois tacos aux haricots noirs, maïs grillé, poivrons, fromage, sauce épicée.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">12.50 €</span>
+                                        <div class="btn-group">
+                                            <a href="shop-detail.html" class="btn btn-outline-primary me-2">Détails</a>
+                                            <button class="btn btn-primary btn-add-to-cart">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Pagination produits" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offcanvas pour filtres mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filtres</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mb-4">
+                <h6 class="mb-3">Catégories</h6>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action active">Tous les plats</a>
+                    <a href="#" class="list-group-item list-group-item-action">Pizzas</a>
+                    <a href="#" class="list-group-item list-group-item-action">Burgers</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tacos</a>
+                    <a href="#" class="list-group-item list-group-item-action">Sandwichs</a>
+                    <a href="#" class="list-group-item list-group-item-action">Accompagnements</a>
+                    <a href="#" class="list-group-item list-group-item-action">Boissons</a>
+                    <a href="#" class="list-group-item list-group-item-action">Desserts</a>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <h6 class="mb-3">Prix</h6>
+                <input type="range" class="form-range mb-3" min="0" max="30" step="1">
+                <div class="d-flex justify-content-between">
+                    <span>0€</span>
+                    <span>30€</span>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary btn-sm">Filtrer</button>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <h6 class="mb-3">Préférences alimentaires</h6>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="vegetarianMobile">
+                    <label class="form-check-label" for="vegetarianMobile">
+                        Végétarien
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="veganMobile">
+                    <label class="form-check-label" for="veganMobile">
+                        Végan
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="glutenFreeMobile">
+                    <label class="form-check-label" for="glutenFreeMobile">
+                        Sans gluten
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="dairyFreeMobile">
+                    <label class="form-check-label" for="dairyFreeMobile">
+                        Sans lactose
+                    </label>
+                </div>
+            </div>
+            
+            <div>
+                <h6 class="mb-3">Note client</h6>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="ratingMobile" id="rating5Mobile" checked>
+                    <label class="form-check-label" for="rating5Mobile">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="ratingMobile" id="rating4Mobile">
+                    <label class="form-check-label" for="rating4Mobile">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        & plus
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="ratingMobile" id="rating3Mobile">
+                    <label class="form-check-label" for="rating3Mobile">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        & plus
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ratingMobile" id="rating2Mobile">
+                    <label class="form-check-label" for="rating2Mobile">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        & plus
+                    </label>
+                </div>
+            </div>
+            
+            <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-primary" type="button" data-bs-dismiss="offcanvas">Appliquer les filtres</button>
+                <button class="btn btn-outline-secondary" type="button">Réinitialiser</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo-white.png" alt="FusionEats Logo" class="mb-4" style="max-height: 70px;">
+                    <p>Une expérience culinaire unique qui fusionne les meilleures saveurs du monde entier pour satisfaire toutes vos envies de street food gourmet.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">INFORMATIONS</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about-us.html">À propos</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="blog-list.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">PLATS PHARES</h5>
+                    <ul class="footer-links">
+                        <li><a href="shop-detail.html">Pizza Margherita</a></li>
+                        <li><a href="shop-detail.html">Burger Classic</a></li>
+                        <li><a href="shop-detail.html">Tacos Mexicains</a></li>
+                        <li><a href="shop-detail.html">Panini Poulet</a></li>
+                        <li><a href="shop-detail.html">Frites Maison</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Rue de la Gastronomie, 75001 Paris</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> 01 23 45 67 89</li>
+                        <li><i class="fas fa-envelope me-2"></i> contact@fusioneats.fr</li>
+                        <li><i class="fas fa-clock me-2"></i> Lun-Dim: 11h00 - 23h00</li>
+                    </ul>
+                    <div class="mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Votre email">
+                                <button class="btn btn-primary" type="button">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright py-3">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2023 FusionEats. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Politique de confidentialité</a>
+                        <a href="#" class="text-white">Conditions d'utilisation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personnalisé -->
+    <script src="js/script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser le compteur du panier
+            updateCartCount();
+            
+            // Ajouter des écouteurs d'événements aux boutons "Ajouter au panier"
+            const addButtons = document.querySelectorAll('.btn-add-to-cart');
+            addButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.food-card');
+                    const name = card.querySelector('.card-title').textContent;
+                    const price = card.querySelector('.price').textContent;
+                    
+                    // Ajouter au panier
+                    addProductToCart(name, price);
+                    
+                    // Mettre à jour le compteur
+                    updateCartCount();
+                    
+                    // Afficher une notification
+                    showToast(`${name} ajouté au panier`);
+                });
+            });
+            
+            // Fonction pour ajouter un produit au panier
+            function addProductToCart(name, price) {
+                // Récupérer le panier actuel
+                let cart = JSON.parse(localStorage.getItem('fusionEatsCart')) || [];
+                
+                // Nettoyer le prix
+                const priceValue = parseFloat(price.replace('€', '').replace(',', '.').trim());
+                
+                // Vérifier si le produit est déjà dans le panier
+                const existingProductIndex = cart.findIndex(item => item.name === name);
+                
+                if (existingProductIndex !== -1) {
+                    // Incrémenter la quantité
+                    cart[existingProductIndex].quantity += 1;
+                } else {
+                    // Ajouter le nouveau produit
+                    cart.push({
+                        name: name,
+                        price: priceValue,
+                        quantity: 1
+                    });
+                }
+                
+                // Sauvegarder le panier
+                localStorage.setItem('fusionEatsCart', JSON.stringify(cart));
+            }
+            
+            // Fonction pour mettre à jour le compteur du panier
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('fusionEatsCart')) || [];
+                const count = cart.reduce((total, item) => total + item.quantity, 0);
+                
+                const cartCountElements = document.querySelectorAll('.cart-count');
+                cartCountElements.forEach(element => {
+                    element.textContent = count;
+                });
+            }
+            
+            // Fonction pour afficher un toast de notification
+            function showToast(message) {
+                // Vérifier si le conteneur de toasts existe
+                let toastContainer = document.querySelector('.toast-container');
+                
+                // Si le conteneur n'existe pas, le créer
+                if (!toastContainer) {
+                    toastContainer = document.createElement('div');
+                    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+                    document.body.appendChild(toastContainer);
+                }
+                
+                // Créer le toast
+                const toastId = 'toast-' + Date.now();
+                const toastHTML = `
+                    <div id="${toastId}" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <strong class="me-auto">FusionEats</strong>
+                            <small>À l'instant</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            ${message}
+                        </div>
+                    </div>
+                `;
+                
+                // Ajouter le toast au conteneur
+                toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+                
+                // Initialiser et afficher le toast
+                const toastElement = document.getElementById(toastId);
+                const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
+                toast.show();
+                
+                // Supprimer le toast du DOM après sa disparition
+                toastElement.addEventListener('hidden.bs.toast', function() {
+                    this.remove();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

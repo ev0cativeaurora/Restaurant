@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Équipe - FusionEats</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="FusionEats Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-list.html">Commander</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="about-us.html">À propos</a></li>
+                            <li><a class="dropdown-item active" href="team.html">Notre équipe</a></li>
+                            <li><a class="dropdown-item" href="menu.html">Menu</a></li>
+                            <li><a class="dropdown-item" href="reservation.html">Réservation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-list.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="shop-list.html" class="btn btn-primary rounded-pill">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            <span class="badge bg-light text-dark">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page Équipe -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4">Notre Équipe</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Accueil</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Notre Équipe</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Décorations alimentaires -->
+        <img src="images/tomato.png" alt="Tomate" class="food-decoration decoration-tomato">
+        <img src="images/leaf.png" alt="Feuille" class="food-decoration decoration-leaf">
+        <img src="images/olive.png" alt="Olive" class="food-decoration decoration-olive">
+        <img src="images/onion.png" alt="Oignon" class="food-decoration decoration-onion">
+    </header>
+
+    <!-- Section équipe de direction -->
+    <section class="py-5">
+        <div class="container">
+            <h5 class="text-primary text-center">Nos Talents</h5>
+            <h2 class="display-6 text-center mb-5">Nos Chefs Exceptionnels</h2>
+            
+            <div class="row">
+                <!-- Chef 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/team/chef-1.jpg" class="card-img-top" alt="Chef Marie Laurent">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Marie Laurent</h4>
+                            <p class="text-primary mb-3">Chef Executive</p>
+                            <p class="card-text">Formée dans les plus grandes cuisines françaises, Marie apporte son expertise gastronomique et sa créativité à chaque plat.</p>
+                            <div class="mt-3">
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/team/chef-2.jpg" class="card-img-top" alt="Chef Karim Benali">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Karim Benali</h4>
+                            <p class="text-primary mb-3">Chef de Cuisine</p>
+                            <p class="card-text">Spécialiste des cuisines méditerranéennes et orientales, Karim fusionne les saveurs avec un sens inné de l'équilibre.</p>
+                            <div class="mt-3">
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/team/chef-3.jpg" class="card-img-top" alt="Chef William Smith">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">William Smith</h4>
+                            <p class="text-primary mb-3">Chef Junior</p>
+                            <p class="card-text">Diplômé de l'école hôtelière de New York, William apporte une touche américaine moderne à nos créations culinaires.</p>
+                            <div class="mt-3">
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section équipe cuisine -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="display-6 text-center mb-5">L'Équipe de Cuisine</h2>
+            
+            <div class="row">
+                <!-- Membre d'équipe 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/team/team-1.jpg" class="card-img-top" alt="Camille Dubois">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Camille Dubois</h4>
+                            <p class="text-primary mb-3">Chef Pâtissière</p>
+                            <p class="card-text">Passionnée par les desserts, Camille crée des pâtisseries qui sont aussi belles que délicieuses.</p>
+                            <div class="mt-3">
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Membre d'équipe 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/team/team-2.jpg" class="card-img-top" alt="Robert Garcia">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Robert Garcia</h4>
+                            <p class="text-primary mb-3">Chef Grillade</p>
+                            <p class="card-text">Véritable maître des grillades, Robert sait parfaitement comment préparer les viandes pour révéler toutes leurs saveurs.</p>
+                            <div class="mt-3">
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Membre d'équipe 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/team/team-3.jpg" class="card-img-top" alt="Nina Michel">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Nina Michel</h4>
+                            <p class="text-primary mb-3">Chef Rôtisseur</p>
+                            <p class="card-text">Spécialiste des viandes rôties, Nina apporte une touche de raffinement à chaque plat qu'elle prépare.</p>
+                            <div class="mt-3">
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon bg-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section compétences -->
+    <section class="py-5">
+        <div class="container">
+            <h5 class="text-primary text-center">Nos Compétences</h5>
+            <h2 class="display-6 text-center mb-5">Une Équipe de Professionnels</h2>
+            
+            <div class="row">
+                <!-- Compétence 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/skills/cooking.jpg" class="card-img-top" alt="Cuisine de Qualité">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-4">Cuisine de Qualité</h4>
+                            <p class="card-text">Notre équipe maîtrise les techniques culinaires les plus exigeantes pour vous offrir des plats d'exception, alliant tradition et innovation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compétence 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/skills/ingredients.jpg" class="card-img-top" alt="Sélection des Ingrédients">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-4">Sélection des Ingrédients</h4>
+                            <p class="card-text">Nos chefs collaborent étroitement avec des producteurs locaux pour sélectionner les meilleurs ingrédients de saison, garantissant fraîcheur et qualité.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compétence 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <img src="images/skills/plating.jpg" class="card-img-top" alt="Présentation Artistique">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-4">Présentation Artistique</h4>
+                            <p class="card-text">Nous accordons une attention particulière à la présentation de nos plats, créant de véritables œuvres d'art culinaires qui raviront vos yeux et vos papilles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section rejoignez l'équipe -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/join-team.jpg" alt="Rejoignez-nous" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="text-primary">Carrières</h5>
+                    <h2 class="display-6 mb-4">Rejoignez Notre Équipe</h2>
+                    <p class="lead mb-4">Vous êtes passionné par la cuisine et souhaitez rejoindre une équipe dynamique et créative ?</p>
+                    <p>Chez FusionEats, nous sommes constamment à la recherche de talents passionnés pour compléter notre équipe. Nous offrons un environnement de travail stimulant où votre créativité et votre expertise seront valorisées. Si vous souhaitez participer à l'aventure FusionEats, envoyez-nous votre CV et lettre de motivation.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg mt-3">Postuler maintenant</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo-white.png" alt="FusionEats Logo" class="mb-4" style="max-height: 70px;">
+                    <p>Une expérience culinaire unique qui fusionne les meilleures saveurs du monde entier pour satisfaire toutes vos envies de street food gourmet.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">INFORMATIONS</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about-us.html">À propos</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="blog-list.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">PLATS PHARES</h5>
+                    <ul class="footer-links">
+                        <li><a href="shop-detail.html">Pizza Margherita</a></li>
+                        <li><a href="shop-detail.html">Burger Classic</a></li>
+                        <li><a href="shop-detail.html">Tacos Mexicains</a></li>
+                        <li><a href="shop-detail.html">Panini Poulet</a></li>
+                        <li><a href="shop-detail.html">Frites Maison</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Rue de la Gastronomie, 75001 Paris</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> 01 23 45 67 89</li>
+                        <li><i class="fas fa-envelope me-2"></i> contact@fusioneats.fr</li>
+                        <li><i class="fas fa-clock me-2"></i> Lun-Dim: 11h00 - 23h00</li>
+                    </ul>
+                    <div class="mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Votre email">
+                                <button class="btn btn-primary" type="button">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright py-3">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2023 FusionEats. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Politique de confidentialité</a>
+                        <a href="#" class="text-white">Conditions d'utilisation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personnalisé -->
+    <script src="js/script.js"></script>
+</body>
+</html>

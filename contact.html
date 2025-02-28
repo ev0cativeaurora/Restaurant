@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FusionEats</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="FusionEats Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-list.html">Commander</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="about-us.html">À propos</a></li>
+                            <li><a class="dropdown-item" href="team.html">Notre équipe</a></li>
+                            <li><a class="dropdown-item" href="menu.html">Menu</a></li>
+                            <li><a class="dropdown-item" href="reservation.html">Réservation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-list.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="shop-list.html" class="btn btn-primary rounded-pill">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            <span class="badge bg-light text-dark">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page Contact -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4">Contactez-Nous</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Accueil</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Décorations alimentaires -->
+        <img src="images/tomato.png" alt="Tomate" class="food-decoration decoration-tomato">
+        <img src="images/leaf.png" alt="Feuille" class="food-decoration decoration-leaf">
+        <img src="images/olive.png" alt="Olive" class="food-decoration decoration-olive">
+        <img src="images/onion.png" alt="Oignon" class="food-decoration decoration-onion">
+    </header>
+
+    <!-- Section formulaire de contact -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h5 class="text-primary">Consultation</h5>
+                    <h2 class="display-6 mb-4">Envoyez-nous un message</h2>
+                    <p class="mb-4">Vous avez des questions, des suggestions ou souhaitez simplement nous faire part de votre expérience ? N'hésitez pas à nous contacter via ce formulaire. Notre équipe vous répondra dans les plus brefs délais.</p>
+                    
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Nom complet *</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="subject" class="form-label">Sujet *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Sélectionner</option>
+                                    <option value="Réservation">Réservation</option>
+                                    <option value="Question générale">Question générale</option>
+                                    <option value="Commentaire">Commentaire/Suggestion</option>
+                                    <option value="Réclamation">Réclamation</option>
+                                    <option value="Candidature">Candidature spontanée</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                    <label class="form-check-label" for="privacyCheck">
+                                        J'accepte que mes données soient traitées conformément à la <a href="#">politique de confidentialité</a>.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="col-lg-6">
+                    <img src="images/contact.jpg" alt="Contactez-nous" class="img-fluid rounded shadow mb-4">
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+                                </div>
+                                <h5>Adresse</h5>
+                                <p class="mb-0">123 Rue de la Gastronomie<br>75001 Paris</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-envelope fa-3x text-primary"></i>
+                                </div>
+                                <h5>Email</h5>
+                                <p class="mb-0">contact@fusioneats.fr<br>info@fusioneats.fr</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-phone-alt fa-3x text-primary"></i>
+                                </div>
+                                <h5>Téléphone</h5>
+                                <p class="mb-0">01 23 45 67 89<br>01 23 45 67 90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section carte -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h5 class="text-primary text-center">Localisez-nous</h5>
+            <h2 class="display-6 text-center mb-5">Où nous trouver</h2>
+            
+            <div class="ratio ratio-21x9 rounded overflow-hidden shadow">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9914406081937!2d2.2922926156740504!3d48.858370079287466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1631524667044!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Paris Centre</h5>
+                            <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> 123 Rue de la Gastronomie, 75001 Paris</p>
+                            <p class="mb-2"><i class="fas fa-phone-alt text-primary me-2"></i> 01 23 45 67 89</p>
+                            <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 11h00 - 23h00 tous les jours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Montmartre</h5>
+                            <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> 45 Rue des Saveurs, 75018 Paris</p>
+                            <p class="mb-2"><i class="fas fa-phone-alt text-primary me-2"></i> 01 23 45 67 90</p>
+                            <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 11h00 - 23h00 tous les jours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Quartier Latin</h5>
+                            <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> 78 Boulevard Saint-Michel, 75005 Paris</p>
+                            <p class="mb-2"><i class="fas fa-phone-alt text-primary me-2"></i> 01 23 45 67 91</p>
+                            <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 11h00 - 23h00 tous les jours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Marais</h5>
+                            <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> 15 Rue des Francs-Bourgeois, 75004 Paris</p>
+                            <p class="mb-2"><i class="fas fa-phone-alt text-primary me-2"></i> 01 23 45 67 92</p>
+                            <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 11h00 - 23h00 tous les jours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <h5 class="text-primary text-center">Aide</h5>
+            <h2 class="display-6 text-center mb-5">Questions fréquentes</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Quels sont vos horaires d'ouverture ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Tous nos restaurants sont ouverts 7 jours sur 7, de 11h00 à 23h00 sans interruption. Le service en cuisine ferme à 22h30, mais le bar reste ouvert jusqu'à la fermeture.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Comment puis-je réserver une table ?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Vous pouvez réserver une table directement sur notre site via la page "Réservation", par téléphone en appelant le restaurant de votre choix, ou en utilisant notre application mobile. Nous recommandons de réserver au moins 24h à l'avance pour les weekends.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Proposez-vous des options végétariennes et véganes ?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Oui, notre menu comprend plusieurs options végétariennes et véganes. Nous pouvons également adapter certains plats selon vos préférences alimentaires. N'hésitez pas à informer votre serveur de vos restrictions alimentaires.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Quelle est votre zone de livraison ?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Nous livrons dans un rayon de 5 km autour de chacun de nos restaurants. La livraison est gratuite pour les commandes supérieures à 25€. Pour vérifier si votre adresse est dans notre zone de livraison, consultez notre site de commande en ligne.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Comment puis-je postuler pour travailler chez FusionEats ?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Vous pouvez consulter nos offres d'emploi dans la section "Carrières" de notre site web ou envoyer directement votre CV et lettre de motivation à recrutement@fusioneats.fr. Nous recherchons régulièrement de nouveaux talents pour renforcer nos équipes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo-white.png" alt="FusionEats Logo" class="mb-4" style="max-height: 70px;">
+                    <p>Une expérience culinaire unique qui fusionne les meilleures saveurs du monde entier pour satisfaire toutes vos envies de street food gourmet.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">INFORMATIONS</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about-us.html">À propos</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="blog-list.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">PLATS PHARES</h5>
+                    <ul class="footer-links">
+                        <li><a href="shop-detail.html">Pizza Margherita</a></li>
+                        <li><a href="shop-detail.html">Burger Classic</a></li>
+                        <li><a href="shop-detail.html">Tacos Mexicains</a></li>
+                        <li><a href="shop-detail.html">Panini Poulet</a></li>
+                        <li><a href="shop-detail.html">Frites Maison</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Rue de la Gastronomie, 75001 Paris</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> 01 23 45 67 89</li>
+                        <li><i class="fas fa-envelope me-2"></i> contact@fusioneats.fr</li>
+                        <li><i class="fas fa-clock me-2"></i> Lun-Dim: 11h00 - 23h00</li>
+                    </ul>
+                    <div class="mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Votre email">
+                                <button class="btn btn-primary" type="button">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright py-3">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2023 FusionEats. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Politique de confidentialité</a>
+                        <a href="#" class="text-white">Conditions d'utilisation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personnalisé -->
+    <script src="js/script.js"></script>
+    
+    <script>
+        // Script pour gérer la soumission du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Merci ! Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
