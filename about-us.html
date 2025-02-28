@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation - FusionEats</title>
+    <title>À Propos - FusionEats</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,27 +30,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
+                        <a class="nav-link " href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop-list.html">Commander</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Pages
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-                            <li><a class="dropdown-item" href="about-us.html">À propos</a></li>
-                            <li><a class="dropdown-item" href="team.html">Notre équipe</a></li>
-                            <li><a class="dropdown-item" href="menu.html">Menu</a></li>
-                            <li><a class="dropdown-item active" href="reservation.html">Réservation</a></li>
-                        </ul>
+                        <a class="nav-link" href="shop-list.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog-list.html">Blog</a>
+                        <a class="nav-link" href="reservation.html">Réservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="about-us.html">À propos</a>
                     </li>
                     <li class="nav-item ms-lg-3">
                         <a href="cart.html" class="btn btn-primary rounded-pill">
@@ -63,202 +52,240 @@
         </div>
     </nav>
 
-    <!-- En-tête de la page Réservation -->
+
+    <!-- En-tête de la page À propos -->
     <header class="page-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h1 class="display-4">Réservez une Table</h1>
+                    <h1 class="display-4">À Propos de Nous</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html" class="text-white">Accueil</a></li>
-                            <li class="breadcrumb-item active text-white" aria-current="page">Réservation</li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">À propos</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Décorations alimentaires -->
-        <img src="images/tomato.png" alt="Tomate" class="food-decoration decoration-tomato">
-        <img src="images/leaf.png" alt="Feuille" class="food-decoration decoration-leaf">
-        <img src="images/olive.png" alt="Olive" class="food-decoration decoration-olive">
-        <img src="images/onion.png" alt="Oignon" class="food-decoration decoration-onion">
+        
     </header>
 
-    <!-- Section informations de contact -->
+    <!-- Section notre histoire -->
     <section class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h2 class="mb-4">Nos restaurants</h2>
-                    <p class="lead mb-5">Vous pouvez nous appeler directement ou nous rendre visite dans l'un de nos établissements.</p>
-                    
-                    <div class="row mb-5">
-                        <div class="col-md-6 mb-4">
-                            <h5>Paris Centre</h5>
-                            <p>123 Rue de la Gastronomie<br>75001 Paris</p>
-                            <p><strong>Téléphone:</strong> 01 23 45 67 89</p>
-                            <p><strong>Horaires:</strong> 11h00 - 23h00 tous les jours</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/about-story.jpg" alt="Notre histoire" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="text-primary">Notre Histoire</h5>
+                    <h2 class="display-6 mb-4">L'histoire de FusionEats</h2>
+                    <p class="lead mb-4">Un voyage passionnant qui a commencé par un simple rêve d'unir les saveurs du monde entier.</p>
+                    <p>FusionEats a été fondé en 2015 par les frères Marc et Paul Lambert, deux passionnés de gastronomie qui ont voyagé à travers le monde pour découvrir les secrets des cuisines de rue. Après des années passées à explorer les marchés de Bangkok, les food trucks de New York et les trattorias romaines, ils ont décidé de créer un concept unique qui réunirait toutes ces influences culinaires sous un même toit.</p>
+                    <p>Notre premier restaurant a ouvert ses portes à Paris et a rapidement conquis le cœur des gourmets par son approche innovante et sa qualité irréprochable. Aujourd'hui, FusionEats est devenu une référence incontournable de la street food gourmet en France.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section notre vision -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <img src="images/about-vision.jpg" alt="Notre vision" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h5 class="text-primary">Notre Vision</h5>
+                    <h2 class="display-6 mb-4">Notre philosophie culinaire</h2>
+                    <p class="lead mb-4">Nous croyons que la bonne nourriture a le pouvoir de rassembler les gens et de créer des moments mémorables.</p>
+                    <p>Notre approche de la cuisine repose sur trois piliers essentiels :</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-check-circle fa-2x"></i></div>
+                            <div>
+                                <h5>Qualité des ingrédients</h5>
+                                <p>Nous sélectionnons minutieusement des ingrédients frais et locaux de la plus haute qualité pour garantir des saveurs authentiques.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-check-circle fa-2x"></i></div>
+                            <div>
+                                <h5>Créativité sans limites</h5>
+                                <p>Nous osons les combinaisons audacieuses et innovantes pour vous faire découvrir des saveurs uniques et surprenantes.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex">
+                            <div class="me-3 text-primary"><i class="fas fa-check-circle fa-2x"></i></div>
+                            <div>
+                                <h5>Respect des traditions</h5>
+                                <p>Chaque plat s'inspire des techniques traditionnelles pour offrir une expérience gustative authentique, même dans la fusion des saveurs.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section chiffres clés -->
+    <section class="py-5 position-relative" style="background-image: url('images/stats-bg.jpg'); background-size: cover; background-position: center; min-height: 300px;">
+        <div class="position-absolute top-0 left-0 w-100 h-100" style="background-color: rgba(0,0,0,0.7);"></div>
+        <div class="container position-relative">
+            <div class="row text-center text-white">
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <div class="display-4 fw-bold mb-2">3</div>
+                    <p class="mb-0">Restaurants</p>
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <div class="display-4 fw-bold mb-2">25+</div>
+                    <p class="mb-0">Chefs experts</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="display-4 fw-bold mb-2">50+</div>
+                    <p class="mb-0">Plats signature</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="display-4 fw-bold mb-2">10k+</div>
+                    <p class="mb-0">Clients satisfaits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section pourquoi nous choisir -->
+    <section class="py-5">
+        <div class="container">
+            <h5 class="text-primary text-center">Nos Atouts</h5>
+            <h2 class="display-6 text-center mb-5">Pourquoi Nous Choisir ?</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-hamburger"></i>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <h5>Montmartre</h5>
-                            <p>45 Rue des Saveurs<br>75018 Paris</p>
-                            <p><strong>Téléphone:</strong> 01 23 45 67 90</p>
-                            <p><strong>Horaires:</strong> 11h00 - 23h00 tous les jours</p>
-                        </div>
-                    </div>
-                    
-                    <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9914406081937!2d2.2922926156740504!3d48.858370079287466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1631524667044!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+                        <h4>Variété de Plats</h4>
+                        <p>Une large sélection de saveurs internationales pour satisfaire toutes vos envies.</p>
                     </div>
                 </div>
                 
-                <div class="col-lg-6">
-                    <div class="reservation-form">
-                        <h2 class="mb-4">Formulaire de réservation</h2>
-                        <p class="mb-4">Remplissez ce formulaire pour réserver une table. Nous vous contacterons rapidement pour confirmer votre réservation.</p>
-                        
-                        <form id="reservationForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Nom complet *</label>
-                                        <input type="text" class="form-control" id="name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email *</label>
-                                        <input type="email" class="form-control" id="email" required>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label">Téléphone *</label>
-                                        <input type="tel" class="form-control" id="phone" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="persons" class="form-label">Nombre de personnes *</label>
-                                        <select class="form-select" id="persons" required>
-                                            <option value="">Sélectionner</option>
-                                            <option value="1">1 personne</option>
-                                            <option value="2">2 personnes</option>
-                                            <option value="3">3 personnes</option>
-                                            <option value="4">4 personnes</option>
-                                            <option value="5">5 personnes</option>
-                                            <option value="6">6 personnes</option>
-                                            <option value="7+">7 personnes ou plus</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="date" class="form-label">Date *</label>
-                                        <input type="date" class="form-control" id="date" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="time" class="form-label">Heure *</label>
-                                        <input type="time" class="form-control" id="time" required>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="restaurant" class="form-label">Restaurant *</label>
-                                <select class="form-select" id="restaurant" required>
-                                    <option value="">Sélectionner</option>
-                                    <option value="Paris Centre">Paris Centre</option>
-                                    <option value="Montmartre">Montmartre</option>
-                                </select>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message ou demandes spéciales</label>
-                                <textarea class="form-control" id="message" rows="3"></textarea>
-                            </div>
-                            
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="termsCheck" required>
-                                <label class="form-check-label" for="termsCheck">J'accepte les <a href="#">conditions d'utilisation</a> et la <a href="#">politique de confidentialité</a>.</label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-lg w-100">Réserver maintenant</button>
-                        </form>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Produits Frais</h4>
+                        <p>Des ingrédients frais sélectionnés chaque jour pour des saveurs authentiques.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-smile-beam"></i>
+                        </div>
+                        <h4>Goût Inégalé</h4>
+                        <p>Des recettes originales créées par nos chefs passionnés pour vous surprendre.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h4>Livraison Rapide</h4>
+                        <p>Vos plats préférés livrés chauds directement à votre porte en un temps record.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section FAQ -->
+    <!-- Section témoignages -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Questions fréquentes</h2>
+            <h5 class="text-primary text-center">Avis Clients</h5>
+            <h2 class="display-6 text-center mb-5">Ce que disent nos clients</h2>
             
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Comment puis-je modifier ou annuler ma réservation ?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Pour modifier ou annuler votre réservation, veuillez nous contacter par téléphone au numéro indiqué sur votre confirmation de réservation, ou par email à reservation@fusioneats.fr. Nous vous demandons de nous prévenir au moins 2 heures à l'avance.
-                                </div>
-                            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card text-center">
+                        <img src="images/client.png " alt="Client" class="testimonial-img">
+                        <h5>Michel Dupont</h5>
+                        <div class="mb-2 rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Y a-t-il un temps d'attente pour les réservations ?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Nous gardons votre table réservée pendant 15 minutes après l'heure de réservation. Au-delà de ce délai, nous ne pouvons pas garantir que votre table sera toujours disponible. Si vous prévoyez un retard, merci de nous en informer.
-                                </div>
-                            </div>
+                        <p class="mb-0">"Les meilleures pizzas que j'ai jamais goûtées ! La pâte est parfaite et les ingrédients sont toujours frais."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card text-center">
+                        <img src="images/client.png" alt="Client" class="testimonial-img">
+                        <h5>Sophie Martin</h5>
+                        <div class="mb-2 rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Peut-on réserver pour des événements spéciaux ?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Oui, nous proposons des services de réservation pour des événements spéciaux tels que des anniversaires, réunions d'entreprise, ou dîners de groupe. Pour les groupes de plus de 8 personnes, veuillez nous contacter directement par téléphone pour discuter de vos besoins spécifiques.
-                                </div>
-                            </div>
+                        <p class="mb-0">"J'adore leurs burgers ! Le steak est toujours parfaitement cuit et la sauce maison est délicieuse."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card text-center">
+                        <img src="images/client.png" alt="Client" class="testimonial-img">
+                        <h5>Thomas Lefebvre</h5>
+                        <div class="mb-2 rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Proposez-vous des menus spéciaux pour les régimes alimentaires particuliers ?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Oui, nous proposons des options végétariennes, véganes et sans gluten. Vous pouvez indiquer vos préférences alimentaires dans le champ "Message ou demandes spéciales" du formulaire de réservation, et nous ferons de notre mieux pour répondre à vos besoins.
-                                </div>
-                            </div>
+                        <p class="mb-0">"Livraison ultra rapide et service client au top. Les tacos sont vraiment authentiques et savoureux !"</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card text-center">
+                        <img src="images/client.png" alt="Client" class="testimonial-img">
+                        <h5>Emma Bernard</h5>
+                        <div class="mb-2 rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
+                        <p class="mb-0">"Un excellent rapport qualité-prix. La variété du menu est impressionnante et tout est délicieux !"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section appel à l'action -->
+    <section class="py-5 position-relative" style="background-image: url('images/cta-bg.jpg'); background-size: cover; background-position: center; min-height: 400px;">
+        <div class="position-absolute top-0 left-0 w-100 h-100" style="background-color: rgba(0,0,0,0.6);"></div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h2 class="display-5 mb-4">Prêt à découvrir nos saveurs?</h2>
+                    <p class="lead mb-4">Réservez une table dès maintenant ou commandez en ligne pour une expérience culinaire inoubliable.</p>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                        <a href="reservation.html" class="btn btn-primary btn-lg">Réserver une table</a>
+                        <a href="shop-list.html" class="btn btn-outline-light btn-lg">Commander en ligne</a>
                     </div>
                 </div>
             </div>
@@ -340,14 +367,5 @@
     
     <!-- JavaScript personnalisé -->
     <script src="js/script.js"></script>
-    
-    <script>
-        // Script pour gérer la soumission du formulaire de réservation
-        document.getElementById('reservationForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Merci ! Votre réservation a été envoyée avec succès. Nous vous contacterons rapidement pour la confirmer.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
